@@ -2,9 +2,9 @@
 # Libraries
 Ant Design
 lodash/debounce
-
-# Run project
+# Setup enviromen
 Run command install: npm install
+# Run project
 Run command: npm start
 
 # Feature
