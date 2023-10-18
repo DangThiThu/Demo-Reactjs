@@ -23,7 +23,7 @@ function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
   const [total, setTotal] = useState<number>(0);
   const [skip, setSkip] = useState<number>(0);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [loadMore, setLoadMore] = useState<boolean>(false);
   const [search, setKeyword] = useState<string>("");
 
