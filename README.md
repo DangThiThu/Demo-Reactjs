@@ -4,8 +4,8 @@ Ant Design
 lodash/debounce
 
 # Run project
-Run command: npm install
-             npm start
+Run command install: npm install
+Run command: npm start
 
 # Feature
 Show list of products
