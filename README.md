@@ -3,7 +3,7 @@
 Ant Design
 lodash/debounce
 # Setup enviromen
-Run command install: npm install
+Run command install: npm install or yarn install
 # Run project
 Run command: npm start
 
