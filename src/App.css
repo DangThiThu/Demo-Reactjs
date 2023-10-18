@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.product-list {
+  margin: 30px;
+  .header{
+    .title{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter{
+      width: 300px;
+      margin-bottom: 20px;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .product-list-container{
+      display: flex;
+      flex-direction: column;
+      background: #F2F7FF;
+      margin-top: 20px;
+      height: calc(100vh - 170px);
+      .empty{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center; 
+    }
+    .list-product-content{
+      display: flex;
+      overflow: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: flex-start;
+      padding: 20px 0px 0px 20px;
+  
+      .item-container{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        width: 16%;
+        background: #fff;
+        margin: 0px 20px 20px 0px;
+        border-radius: 15px;
+        padding: 15px;
+        height: 280px;
+        .image{
+          height: 60%;
+        }
+        .title-price-container{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-top: 10px;
+         
+        }
+        .title{
+          text-align: center;
+          flex: 1;
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 10px;
+  
+        }
+        .price{
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+          color:#d0021c;
+          height: 10%;
+        }
+        
+        
+      }
+    }
+    .custom-load-more{
+      display: flex;
+      justify-content: center;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  
+  
 }
+
+
+
