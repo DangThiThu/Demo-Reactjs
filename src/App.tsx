@@ -10,12 +10,13 @@ type ProductType = {
   price: number;
 };
 
-type DataResponse = {
+type ResponseData = {
   products?: ProductType[];
   total?: number;
   skip?: number;
   limit?: number;
 };
+
 
 function App() {
   const limit: number = 20;
@@ -30,12 +31,6 @@ function App() {
     setLoading(true);
     getListProduct(search, 0);
   }, []);
-
-  useEffect(() => {
-    if (products && products.length) {
-      setSkip(products.length);
-    }
-  }, [products]);
 
   //action
 
@@ -53,7 +48,7 @@ function App() {
     url.search = new URLSearchParams(params).toString();
     fetch(url)
       .then((response) => response.json())
-      .then((data: DataResponse) => {
+      .then((data: ResponseData) => {
         if (data && data.products) {
           let ndata = [...data.products];
           if (skip > 0) {
@@ -61,6 +56,7 @@ function App() {
           }
           setProducts(ndata);
           setTotal(data.total || 0);
+          setSkip(ndata.length);
         }
         setLoading(false);
         setLoadMore(false);
@@ -112,7 +108,7 @@ function App() {
   return (
     <div className="product-list">
       <div className="header">
-        <h2 className="title">Danh sách sản phẩm</h2>
+        <h2 className="title">List of products</h2>
         <div className="filter">
           <Input
             placeholder="Nhập từ khóa"
